@@ -1,0 +1,9 @@
+MAILTO="sync@mailserver"
+MAILFROM="cron@localserver"
+
+
+# Sync in workhours
+0,20,40 7-16 * * *  root  /root/bash/sync/sync-source.destination.backup.bash "/mnt/ssh0" "Share01" "/srv/samba" "/srv/sync"
+
+# Sync in not workhours
+0 20,5  * * *  root  /root/bash/sync/sync-source.destination.backup.bash "/mnt/ssh0" "Share01" "/srv/samba" "/srv/sync"
